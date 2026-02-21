@@ -1,0 +1,29 @@
+project:
+  name: soc-automation-suite
+
+paths:
+  sample_logs_dir: data/sample_logs
+  outputs_dir: outputs
+  alerts_log: outputs/alerts.log
+  actions_log: outputs/actions.log
+  reports_dir: outputs/reports
+
+enrichment:
+  enable: true
+  cache_file: data/enriched_events/ti_cache.json
+  cache_ttl_hours: 24
+
+response:
+  enable: true  
+  mock_firewall_url: http://127.0.0.1:5005
+
+baseline:
+  enable: true
+  file: data/enriched_events/baseline_state.json
+  alpha: 0.2          
+  spike_multiplier: 3 
+  min_baseline: 3     
+
+monitor:
+  interval_seconds: 10
+

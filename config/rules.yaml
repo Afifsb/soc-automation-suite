@@ -1,0 +1,20 @@
+rules:
+  - id: BRUTE_FORCE
+    description: "Multiple failed logins from same IP in short window"
+    type: brute_force
+    threshold: 5
+    window_minutes: 5
+    severity: high
+    
+  - id: WEB_RECON
+    description: "Multiple 404 hits to sensitive web paths (recon/scanning)"
+    type: web_recon
+    threshold: 5
+    severity: medium
+  
+  - id: PORT_SCAN
+    description: "Same source IP hits many different destination ports"
+    type: port_scan
+    threshold_ports: 5
+    severity: high
+

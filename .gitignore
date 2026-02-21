@@ -1,0 +1,60 @@
+
+# Python
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+
+# Environment & Secrets
+
+.env
+.env.*
+!.env.example
+
+# API keys / credentials
+*.key
+*.pem
+*.crt
+
+
+# Logs & Outputs (generated)
+
+outputs/
+*.log
+
+
+# Enriched / Cached Data
+
+data/enriched_events/
+data/raw_logs/
+
+data/sample_logs/
+
+
+# Threat Intelligence Cache
+ti_cache.json
+baseline_state.json
+
+
+# IDE / OS files
+
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+
+# Flask debug
+instance/
